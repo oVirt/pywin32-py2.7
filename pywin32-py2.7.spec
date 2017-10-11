@@ -2,7 +2,7 @@
 %global		_pyver py2.7
 
 Name:		%{_basename}-%{_pyver}
-Version:	220
+Version:	221
 Release:	1%{?dist}
 Summary:	RPM wrapper for %{name}
 License:	Python
@@ -27,6 +27,9 @@ cp -v %{_builddir}/%{name}/* $DST
 %{_datadir}/%{name}
 
 %changelog
+* Wed Oct 11 2017 Sandro Bonazzola <sbonazzo@redhat.com> - 221-1
+- rebased on upstream 221
+
 * Fri Sep  2 2016 Sandro Bonazzola <sbonazzo@redhat.com> - 220-1
 - rebased on upstream 220
 
