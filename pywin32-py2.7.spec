@@ -2,12 +2,12 @@
 %global		_pyver py2.7
 
 Name:		%{_basename}-%{_pyver}
-Version:	221
+Version:	222
 Release:	1%{?dist}
 Summary:	RPM wrapper for %{name}
 License:	Python
-Source:		http://sourceforge.net/projects/%{_basename}/files/%{_basename}/Build%20%{version}/%{_basename}-%{version}.win32-%{_pyver}.exe
-URL:		http://sourceforge.net/projects/pywin32/
+Source:		https://github.com/mhammond/%{_basename}/releases/download/b222/%{_basename}-%{version}.win32-%{_pyver}.exe
+URL:		https://github.com/mhammond/pywin32
 BuildArch:	noarch
 Packager:	Lev Veyde <lveyde@redhat.com>
 
@@ -27,6 +27,10 @@ cp -v %{_builddir}/%{name}/* $DST
 %{_datadir}/%{name}
 
 %changelog
+* Fri Jan 26 2018 Sandro Bonazzola <sbonazzo@redhat.com> - 222-1
+- rebased on upstream 222
+- updated Url and Source to match new location for pywin32
+
 * Wed Oct 11 2017 Sandro Bonazzola <sbonazzo@redhat.com> - 221-1
 - rebased on upstream 221
 
